@@ -23,10 +23,6 @@ public class ParkingSlot {
     }  
 
     public boolean canFitVehicle(Vehicle vehicle) {
-        return switch (vehicle.getType()) {
-            case BIKE -> true; // can fit anywhere
-            case CAR -> this.slotType == SlotType.MEDIUM || this.slotType == SlotType.LARGE;
-            case TRUCK -> this.slotType == SlotType.LARGE;
-        };
+        return vehicle.getType().canFitInSlot(this.slotType);
     }
 }

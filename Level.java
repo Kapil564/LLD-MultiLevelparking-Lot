@@ -3,7 +3,7 @@ public class Level {
     private int LevelId;
     private List<ParkingSlot> slots;
 
-    private Level(int levelId, List<ParkingSlot> parkingSlots) {
+    public  Level(int levelId, List<ParkingSlot> parkingSlots) {
         this.LevelId = levelId;
         this.slots = parkingSlots;
     }
